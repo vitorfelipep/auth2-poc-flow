@@ -1,0 +1,421 @@
+{
+	"info": {
+		"_postman_id": "48fddbf8-7c0a-4467-8dde-e2da19c6c72f",
+		"name": "estudo-auth2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Password Flow",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "web123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "api-test-web",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "grant_type",
+						"value": "password",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "username",
+						"value": "vitor.costa",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "@1234",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "vitor.costa",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "@1234",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8383/oauth/token",
+					"host": [
+						"localhost"
+					],
+					"port": "8383",
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authorization code - Solicitar token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "web123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "api-test-web",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "grant_type",
+						"value": "password",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "username",
+						"value": "vitor.costa",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "@1234",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "vitor.costa",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "@1234",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8383/oauth/token",
+					"host": [
+						"localhost"
+					],
+					"port": "8383",
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Client-Credentials - Get Token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "web123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "api-test-web",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "grant_type",
+						"value": "password",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "username",
+						"value": "vitor.costa",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "@1234",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "vitor.costa",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "@1234",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8383/oauth/token",
+					"host": [
+						"localhost"
+					],
+					"port": "8383",
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Token - Solicitar novo acess token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "web123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "api-test-web",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "grant_type",
+						"value": "password",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "username",
+						"value": "vitor.costa",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "@1234",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "vitor.costa",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "@1234",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8383/oauth/token",
+					"host": [
+						"localhost"
+					],
+					"port": "8383",
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8383/oauth/check_token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "web123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "api-test-web",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "token",
+							"value": "306ca08c-112b-4f99-add0-5f0aee9ff4a4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8383/oauth/check_token",
+					"host": [
+						"localhost"
+					],
+					"port": "8383",
+					"path": [
+						"oauth",
+						"check_token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8585/v1/foods",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessTokenUrl",
+							"value": "localhost:8383/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "@1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "vitor.costa",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "password_credentials",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Token Test Security API",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "web123",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "api-test-web",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "localhost:8383/oauth/token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "pt-BR;",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8585/v1/foods",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"v1",
+						"foods"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
