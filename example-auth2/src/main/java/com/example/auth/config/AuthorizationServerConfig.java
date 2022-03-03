@@ -39,11 +39,12 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                     .authorizedGrantTypes("password", "refresh_token")
                     .scopes("write", "read")
                     .accessTokenValiditySeconds(15)
+                    .refreshTokenValiditySeconds(25)
                 .and()
-                    .withClient("app-mobile")
-                    .secret(passwordEncoder.encode("mobile@123"))
-                    .authorizedGrantTypes("password")
-                    .scopes("write", "read")
+                    .withClient("billing-app")
+                    .secret(passwordEncoder.encode("apps_billing@123"))
+                    .authorizedGrantTypes("client_credentials")
+                    .scopes("read")
                     .accessTokenValiditySeconds(60 * 3)
                 .and()
                     .withClient("checktoken-test-api")
@@ -58,6 +59,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
         endpoints.authenticationManager(authenticationManager)
-                .userDetailsService(userDetailsService);
+                .userDetailsService(userDetailsService)
+                .reuseRefreshTokens(false);
     }
 }
