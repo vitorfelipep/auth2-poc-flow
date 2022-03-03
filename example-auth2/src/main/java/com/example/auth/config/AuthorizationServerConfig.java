@@ -47,6 +47,13 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                     .scopes("read")
                     .accessTokenValiditySeconds(60 * 3)
                 .and()
+                    .withClient("analytics-owner-app")
+                    .secret(passwordEncoder.encode("apps_analysis@123"))
+                    .authorizedGrantTypes("authorization_code")
+                    .scopes("write", "read")
+                    .redirectUris("http://app-client/redirect")
+                    .accessTokenValiditySeconds(60 * 3)
+                .and()
                     .withClient("checktoken-test-api")
                     .secret(passwordEncoder.encode("api@123"));
     }
